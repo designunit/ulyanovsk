@@ -6,14 +6,11 @@ export type LogoProps = {
 }
 
 export const Logo: React.SFC<LogoProps> = props => {
-    // const router = useRouter()
-    // const main = router.asPath === '/'
-
     return (
-            <Link href='/'>
-                <a className={s.logo} style={props.style}>
-                    Ивановскаая обасть
-                </a>
-            </Link>
+        <Link href='/'>
+            <a className={s.logo} style={props.style}>
+                Ивановская обасть
+            </a>
+        </Link>
     )
 }
