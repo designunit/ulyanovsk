@@ -6,9 +6,10 @@ import { NextSeo } from 'next-seo'
 export const PageLayout: React.FC<any> = props => {
     const [isOpen, setIsOpen] = useState(false)
     const onClickMenu = useCallback(() => setIsOpen(!isOpen), [isOpen])
-    const onClick = useCallback((i: number) => {
+    const onClick = useCallback((x, e) => {
         setIsOpen(false)
-        if (i == 2) {
+        if (x.href == '/') {
+            e.preventDefault()
             props.openModal()
         }
     }, [])

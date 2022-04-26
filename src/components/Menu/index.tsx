@@ -3,7 +3,7 @@ import { Button } from "../Button"
 import { useRef } from "react"
 
 interface MenuProps {
-    onClick: (i:number) => void
+    onClick: (x: any, e: any) => void
 }
 
 export const Menu: React.FC<MenuProps> = ({ onClick }) => {
@@ -29,7 +29,7 @@ export const Menu: React.FC<MenuProps> = ({ onClick }) => {
                     href={x.href}
                     theme={'link'}
                     underlineRef={underline}
-                    onClick={() => onClick(i)}
+                    onClick={e => onClick(x, e)}
                     style={{
                         fontSize: '22px',
                         fontFamily: 'Bebas Neue',
