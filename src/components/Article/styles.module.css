@@ -4,12 +4,11 @@
 }
 
 .article a {
-    color: var(--color-text);
+    color: var(--color-button);
 }
 
 .article a:hover {
-    color: #ffffff;
-    background-color: var(--color-gray);
+    font-weight: bold;
 }
 
 .article p {

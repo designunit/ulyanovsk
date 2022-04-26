@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import { NextPage } from 'next'
 import { Hero } from 'src/components/Hero'
 import { ParallaxProvider } from 'react-scroll-parallax'

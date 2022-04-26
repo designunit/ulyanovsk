@@ -10,10 +10,9 @@
     align-items: center;
     justify-content: center;
 
-    font-family: Bebas Neue;
+    font-family: 'PT Serif', serif;
     font-weight: bold;
     font-size: 32px;
-    letter-spacing: 5px;
     text-align: center;
     color: white;
 }

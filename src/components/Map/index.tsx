@@ -32,12 +32,13 @@ export const Map: React.FC = () => {
                 flexDirection: 'column',
                 justifyContent: 'space-around',
                 alignItems: 'center',
+                gap: '8rem',
 
                 width: '1000px',
                 maxWidth: '100%',
             }}>
                 <div>
-                    <Title level={2}>
+                    <Title level={2} style={{ textAlign: 'center' }}>
                         Карта идей и предложений
                     </Title>
                 </div>

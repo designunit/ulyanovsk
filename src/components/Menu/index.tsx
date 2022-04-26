@@ -7,9 +7,7 @@ interface MenuProps {
 }
 
 export const Menu: React.FC<MenuProps> = ({ onClick }) => {
-
     const underline = useRef(null)
-
     const buttons = [
         {
             href: '/#map',
@@ -31,8 +29,7 @@ export const Menu: React.FC<MenuProps> = ({ onClick }) => {
                     underlineRef={underline}
                     onClick={e => onClick(x, e)}
                     style={{
-                        fontSize: '22px',
-                        fontFamily: 'Bebas Neue',
+                        fontSize: '1.05em',
                     }}
                 >
                     {x.text}
