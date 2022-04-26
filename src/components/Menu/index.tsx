@@ -12,20 +12,12 @@ export const Menu: React.FC<MenuProps> = ({ onClick }) => {
 
     const buttons = [
         {
-            href: '/#about',
-            text: 'О проекте'
-        },
-        {
             href: '/#map',
             text: 'Карта идей'
         },
         {
             text: 'Пройти опрос',
             href: '/'
-        },
-        {
-            href: '/#faq',
-            text: 'Вопрос/Ответ'
         },
     ]
 

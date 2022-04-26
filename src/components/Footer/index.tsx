@@ -59,7 +59,7 @@ export const Footer: React.SFC = props => {
                     href={'https://unit4.io'}
                     theme={'link'}
                 >
-                    ©2020 design unit 4
+                    ©2022 design : : unit 4
                 </Button>
             </div>
         </footer>
