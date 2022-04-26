@@ -1,6 +1,20 @@
 {
   "_cts": {
-    "news": {}
+    "news": {},
+    "hero": {
+      "title": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      },
+      "description": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    }
   },
   "slices": {
     "NewsSlice": {

@@ -9,14 +9,13 @@ import * as prismicH from '@prismicio/helpers'
 
 export const News: React.FC<{ data: any }> = ({ data }) => (
     <div>
-        {console.log(data)}
         {data.map((x, i) => (
             <Section key={i}>
                 <div className={s.head}>
                     <Title level={2}>
                         {x.primary.title?.[0]?.text ?? ''}
                     </Title>
-                    <Title level={4}>
+                    <Title level={4} style={{marginLeft: '.15rem'}}>
                         {x.primary?.date && prismicH.asDate(x.primary.date).toLocaleDateString()}
                     </Title>
                 </div>

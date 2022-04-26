@@ -14,10 +14,11 @@ const levelClass = new Map([
 export type TitleProps = {
     level?: 1 | 2 | 3 | 4 | 5 | 6
     style?: React.CSSProperties
+    className?: string
 }
 
 export const Title: React.FC<TitleProps> = ({ level = 1, style,  ...props }) => {
     const Tag = `h${level}`
 
-    return createElement(Tag, { className: cx(s.title, levelClass.get(level)), style }, props.children)
+    return createElement(Tag, { className: cx(s.title, levelClass.get(level), props.className), style }, props.children)
 }

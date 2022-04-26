@@ -1,7 +1,11 @@
 .titleLine {
-    padding: .5rem 1rem .1rem 1rem;
+    padding: 1.5rem;
     width: fit-content;
     max-width: 100%;
+    text-align: left;
+}
+.titleLine h1 {
+    margin: 0;
     text-align: left;
 }
 
@@ -9,15 +13,14 @@
     background-color: white;
 }
 
-.titleTura {
-    color: white;
-    -webkit-text-stroke: 2px black;
-}
-
 .description {
     color: var(--color-text);
     max-width: 25rem;
     padding: 1rem;
+    padding-bottom: .25rem;
+}
+.description>p {
+    margin-top: 0;
 }
 
 .content {

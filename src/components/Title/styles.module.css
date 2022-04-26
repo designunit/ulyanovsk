@@ -11,7 +11,7 @@
 
 .h1 {
     font-size: 64px;
-    line-height: 64px;
+    line-height: 74px;
     letter-spacing: 2px;
     font-weight: 900;
     margin-bottom: 48px;
@@ -41,7 +41,7 @@
     }
     .h1 {
         font-size: 38px;
-        line-height: 42px;
+        line-height: 46px;
     }
     .h2 {
         font-size: 48px;

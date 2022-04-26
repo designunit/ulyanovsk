@@ -12,9 +12,10 @@ import { News } from 'src/components/News'
 
 interface PageProps {
     newsData: any
+    heroData: any
 }
 
-const Index: NextPage<PageProps> = ({ newsData }) => {
+const Index: NextPage<PageProps> = ({ newsData, heroData }) => {
 
     const [modalIsOpen, setModalIsOpen] = useState(false)
     return (
@@ -29,11 +30,13 @@ const Index: NextPage<PageProps> = ({ newsData }) => {
                 />
 
                 <Hero
+                    data={heroData.data}
                     openModal={() => setModalIsOpen(true)}
                 />
 
                 <News data={newsData.data.slices} />
 
+                <span id='map' />
                 <Map />
 
                 <Footer />
@@ -46,10 +49,12 @@ const Index: NextPage<PageProps> = ({ newsData }) => {
 export const getStaticProps = async ({ previewData }) => {
     const client = createClient({ previewData })
     const newsData = await client.getSingle('news')
+    const heroData = await client.getSingle('hero')
 
     return {
         props: {
             newsData,
+            heroData,
         }
     }
 }

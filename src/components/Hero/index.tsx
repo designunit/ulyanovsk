@@ -5,15 +5,18 @@ import React, { useContext } from 'react'
 import { ConfigContext } from 'src/context/config'
 import { SectionParalaxedBack } from '../SectionParalaxedBack'
 import Image from 'next/image'
+import { PrismicRichText } from '@prismicio/react'
 
-export const Hero: React.FC<any> = ({ openModal }) => {
+export const Hero: React.FC<any> = ({ data, openModal }) => {
     const { mapUrl } = useContext(ConfigContext)
-
+    console.log(data)
     return (
         <SectionParalaxedBack
             back={(
                 <Image
-                    src='/static/hero.jpg'
+                    src={data.image?.url ?? '/static/unit.jpg'}
+                    {...data.image?.dimensions ?? { width: 1590, height: 307 }}
+                    alt={data.image?.alt ?? ''}
                     layout='fill'
                     objectFit='cover'
                     priority
@@ -25,18 +28,16 @@ export const Hero: React.FC<any> = ({ openModal }) => {
                 paddingTop: '5rem'
             }}
         >
-            <Title>
-                <div className={`${s.whiteBg} ${s.titleLine}`}>
-                    Набережная Верхнетуринского пруда<br/>
-                </div>
-                <div className={`${s.whiteBg} ${s.titleLine} ${s.titleTura}`}>
-                    от&nbsp;площади до&nbsp;ул. Молодцова
-                </div>
-            </Title>
+
+            <div className={`${s.whiteBg} ${s.titleLine}`}>
+                <Title>
+                    <PrismicRichText field={data.title} />
+                </Title>
+            </div>
 
             <span className={s.heroSubtitle}>
                 <p className={`${s.description} ${s.whiteBg}`}>
-                    Обсуждаем вместе с&nbsp;горожанами, экспертами, предпринимателями, представителями культурных и&nbsp;образовательных учреждений как преобразовать набережную верхнетуринского пруда от&nbsp;площади до&nbsp;ул. Молодцова.
+                    <PrismicRichText field={data.description} />
                 </p>
             </span>
 
