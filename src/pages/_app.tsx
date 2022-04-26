@@ -1,16 +1,15 @@
 import 'src/style.css'
 import 'src/style/react-modal.css'
 
-import Head from 'next/head'
-import { AppType } from 'next/dist/next-server/lib/utils'
-import { YMetrika } from 'src/components/YMetrika'
 import { ConfigContext, defaultConfig } from 'src/context/config'
 import { ControlsContext } from 'src/context/controls'
+import { AppType } from 'next/dist/shared/lib/utils'
+import Head from 'next/head'
+import { PrismicProvider } from '@prismicio/react'
+import { internalLinkComponent, repositoryName } from 'prismicio'
+import { PrismicPreview } from '@prismicio/next'
 
-const App: AppType = (props) => {
-    const { Component, pageProps } = props
-    const metrika = process.env.YANDEX_METRIKA as string
-
+const App: AppType = ({ Component, pageProps }) => {
     return (
         <ConfigContext.Provider value={defaultConfig}>
             <ControlsContext.Provider
@@ -25,13 +24,16 @@ const App: AppType = (props) => {
                         name='viewport'
                         content='width=device-width, maximum-scale=1.0'
                     />
-
-                    {!metrika ? null : (
-                        <YMetrika number={metrika} mode={'script'} />
-                    )}
                 </Head>
 
-                <Component {...pageProps} />
+                <PrismicProvider
+                    internalLinkComponent={internalLinkComponent}
+                >
+
+                    <PrismicPreview repositoryName={repositoryName}>
+                        <Component {...pageProps} />
+                    </PrismicPreview>
+                </PrismicProvider>
             </ControlsContext.Provider>
         </ConfigContext.Provider>
     )
