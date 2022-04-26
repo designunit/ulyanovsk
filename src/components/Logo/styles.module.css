@@ -1,0 +1,24 @@
+.logo {
+    font-family: Bebas Neue;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 38px;
+
+    text-align: center;
+
+    color: var(--color-logo);
+
+    text-decoration: none;
+}
+
+@media screen and (max-width : 1280px) {
+    .logo {
+        text-align: start;
+    }
+}
+
+@media screen and (max-width : 480px) {
+    .logo {
+        text-align: center;
+    }
+}

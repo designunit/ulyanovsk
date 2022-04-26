@@ -1,0 +1,57 @@
+.titleLine {
+    padding: .5rem 1rem .1rem 1rem;
+    width: fit-content;
+    max-width: 100%;
+    text-align: left;
+}
+
+.whiteBg {
+    background-color: white;
+}
+
+.titleTura {
+    color: white;
+    -webkit-text-stroke: 2px black;
+}
+
+.description {
+    color: var(--color-text);
+    max-width: 25rem;
+    padding: 1rem;
+}
+
+.content {
+    padding: 0 128px;
+}
+
+.heroButtons {
+    padding-top: 64px;
+    display: flex;
+}
+
+.buttonsSpacer{
+    width: 36px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+}
+
+@media screen and (max-width: 480px) {
+    .heroSubtitle {
+        display: none;
+    }
+
+    .heroButtons {
+        width: 100%;
+        padding: 64px 10% 0 10%;
+        flex-wrap: wrap;
+    }
+
+    .buttonsSpacer {
+        height: 36px;
+    }
+}

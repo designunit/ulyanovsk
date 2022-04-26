@@ -1,0 +1,89 @@
+.header {
+    position: fixed;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    z-index: 100;
+
+    padding: 4px 10% 0 10%;
+
+    background-color: white;
+    
+    box-shadow: 0 3px 5px rgba(9, 17, 51, 0.1)
+}
+
+.menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menuButton {
+    display: none;
+}
+
+.mobileMenu a, .mobileMenu button:not(.closeMenu) {
+    font-family: Bebas Neue;
+    font-size: 36px;
+    line-height: 2rem;
+    font-weight: 900;
+    text-align: start;
+    letter-spacing: 2px;
+
+    justify-content: flex-start;
+
+    margin-bottom: 2rem;
+    padding-right: 1.5rem;
+}
+
+.mobileMenuList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    background-color: white;
+}
+
+.closeMenu {
+    border: none;
+    background: none;
+
+    align-self: flex-end;
+    height: 7%;
+    width: auto;
+    padding: 5%;
+    margin: 5px 10px 1rem 0;
+}
+
+.transparent {
+    background-color: transparent;
+}
+
+@media screen and (max-width : 1280px) {
+    .header {
+        padding: 4px 5%;
+    }
+}
+
+@media screen and (max-width : 480px) {
+    .menu {
+        display: none;
+    }
+
+    .header {
+        padding: 12px 5% 12px 10%;
+        justify-content: space-between;
+    }
+
+    .menuButton {
+        display: inline-block;
+
+        border: none;
+        background: none;
+
+        height: 7%;
+        width: auto;
+        padding: 3%;
+    }
+}

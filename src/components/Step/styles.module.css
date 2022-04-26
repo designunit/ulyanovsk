@@ -1,0 +1,57 @@
+.step {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: 190px;
+    margin-right: 24px;
+}
+
+.step ul {
+    padding: 0;
+    list-style: none;
+}
+
+.step li {
+    line-height: 1.25em;
+    color: black; 
+    position: relative;
+    padding: 8px 0px 8px 0; /* 48px */
+    margin: 0px 0px 16px;
+}
+
+/* .step ul li:before {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+
+    left: 0px;
+    top: 0px;
+
+    background-image: url('/static/cross.svg');
+    background-size: 32px;
+} */
+
+.head {
+    height: 60px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.head h3 {
+    font-family: Bebas Neue;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: bold;
+    
+    white-space: nowrap;
+}
+
+
+@media screen and (max-width : 1280px) {
+    .step {
+        flex: 1 0 29%;
+    }
+}
+

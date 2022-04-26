@@ -1,0 +1,15 @@
+.slides {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0;
+
+    padding-top: 70px;
+}
+
+.picture {
+    max-width: 100vw;
+    height: auto;
+    flex: 0 1 auto;
+}

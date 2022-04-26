@@ -1,0 +1,48 @@
+.form {
+    padding: 0 10%;
+    width: 100%;
+}
+
+.fields {
+    display: flex;
+}
+
+.inputs {
+    margin-right: 24px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.field {
+    padding: 28px 18px;
+    margin-bottom: 24px;
+
+    width: 100%;
+
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+
+    border-radius: var(--button-border-radius);
+    border: 2px solid #091133;
+}
+
+@media screen and (max-width : 480px) {
+    .form {
+        padding : 0;
+    }
+    .inputs {
+        margin-right: 0px;
+    }
+    .fields {
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,54 @@
+.title {
+    font-family: Bebas Neue;
+    font-weight: bold;
+
+    font-style: normal;
+    font-weight: 500;
+    color: black;
+
+    align-self: flex-start;
+}
+
+.h1 {
+    font-size: 64px;
+    line-height: 64px;
+    letter-spacing: 2px;
+    font-weight: 900;
+    margin-bottom: 48px;
+}
+
+.h2 {
+    text-align: center;
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: 2px;
+    font-weight: 900;
+
+    margin-bottom: 48px;
+}
+
+.h3 {
+    font-size: 36px;
+    line-height: 32px;
+    letter-spacing: 1px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+@media screen and (max-width: 480px) {
+    .title {
+        text-align: center;
+    }
+    .h1 {
+        font-size: 38px;
+        line-height: 42px;
+    }
+    .h2 {
+        font-size: 48px;
+        line-height: 50px;
+    }
+    .h3 {
+        text-align: left;
+    }
+}
+
