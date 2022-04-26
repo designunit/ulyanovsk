@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import s from './styles.module.css'
 
 export type LogoProps = {
@@ -9,8 +10,10 @@ export const Logo: React.SFC<LogoProps> = props => {
     // const main = router.asPath === '/'
 
     return (
-        <span className={s.logo} style={props.style}>
-            Набережная В. Тура
-        </span>
+            <Link href='/'>
+                <a className={s.logo} style={props.style}>
+                    Набережная В. Тура
+                </a>
+            </Link>
     )
 }

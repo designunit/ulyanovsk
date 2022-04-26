@@ -7,6 +7,25 @@ import { OpinionForm } from '../OpinionForm'
 import { Title } from '../Title'
 import { Article } from '../Article'
 
+const data = [
+    {
+        name: 'Ульяновск',
+        src: 'https://docs.google.com/forms/d/e/1FAIpQLSf50MNOn54JfBkgCm_0CS2MCn1AxLEdoM9mOs88V-isPMUiBQ/viewform?embedded=true',
+    },
+    {
+        name: 'Димитровград',
+        src: 'https://docs.google.com/forms/d/e/1FAIpQLScIBHMxEapxIP6DQZyeIsSBEWYQE6kCma3Br98f7oiM59mM7w/viewform?embedded=true',
+    },
+    {
+        name: 'Новоульяновск',
+        src: 'https://docs.google.com/forms/d/e/1FAIpQLSf50MNOn54JfBkgCm_0CS2MCn1AxLEdoM9mOs88V-isPMUiBQ/viewform?embedded=true',
+    },
+    {
+        name: 'В другом районе агломерации',
+        src: 'https://docs.google.com/forms/d/e/1FAIpQLScIBHMxEapxIP6DQZyeIsSBEWYQE6kCma3Br98f7oiM59mM7w/viewform?embedded=true',
+    },
+]
+
 export type ModalProps = Omit<ReactModal.Props, 'closeTimeoutMS'>
 
 export const Modal: React.FC<{
@@ -15,9 +34,7 @@ export const Modal: React.FC<{
 }> = ({ modalIsOpen, setModalIsOpen }) => {
     const delay = 250
 
-    const [state, setState] = useState<'start' | 'form' | 'finish'>('start')
-
-    const refContainer = useRef<HTMLDivElement>(null)
+    const [state, setState] = useState<null | 1 | 2 | 3 | 4>(null)
 
     return (
         <ReactModal
@@ -31,8 +48,8 @@ export const Modal: React.FC<{
             <>
                 <div className={s.title}>
                     <Title level={3}>
-                        Благоустройство Набережной Верхнетуринского пруда<br />Опрос горожан
-                </Title>
+                        Заголовок опроса
+                    </Title>
                     <Button
                         onClick={() => setModalIsOpen(false)}
                         theme={'link'}
@@ -41,7 +58,7 @@ export const Modal: React.FC<{
                         style={{
                             position: 'absolute',
                             top: '5.5rem',
-                            right: 'calc(10% + 2rem)',
+                            right: 'calc(10%)',
                             zIndex: 2,
                         }}
                     >
@@ -54,75 +71,32 @@ export const Modal: React.FC<{
                         />
                     </Button>
                 </div>
-                <span ref={refContainer} />
-                {state == 'start' ? (
-                    <div style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                    }}>
+                {state == null ? (
+                    <div className={s.preview}>
                         <Article>
                             <p>Друзья, спасибо, что вы здесь!</p>
-
                             <p>Расскажите нам о ваших идеях и предложениях по преобразованию Набережной Верхнетуринского пруда для участия во Всероссийском конкурсе лучших проектов создания комфортной городской среды в малых городах.</p>
-
-                            <p>От активности и вовлеченности жителей зависит получит ли город денежный грант на реализацию проекта. Поделитесь, пожалуйста, ссылкой на опрос и интерактивную карту с друзьями, соседями, коллегами и знакомыми. Чем больше мы соберем ответов — тем более полную информацию получим о мнении жителей, как должна развиваться территория Набережной.</p>
-
-                            <p>Обратите внимание, многие вопросы в данной анкете не являются обязательными. Если у вас не так много времени для заполнения, можно ограничиться только обязательными вопросами, но будем рады если вы ответите на все предложенные вопросы. На заполнение у вас уйдет не более 25 минут.</p>
-
-                            <p>В анкете есть блок вопросов о городе, он необходим для того, чтобы концепция набережной отражала образ города Верхняя Тура и изменения в возможностях для досуга и отдыха горожан, а не только решение первоочередных проблем городской среды.</p>
                         </Article>
-                        <Button
-                            onClick={() => setState('form')}
-                            theme={'default'}
-                            size='big'
-                            style={{
-                                marginTop: '2rem',
-                                marginBottom: '2rem',
-                                width: 'fit-content',
-                            }}
-                        >
-                            НАЧАТЬ ОПРОС
-                </Button>
-                    </div>
-                ) : (
-                        state == 'finish' ? (
-                            <div style={{
-                                height: '75%',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                            }}>
-                                <div style={{
-                                    paddingBottom: '3rem',
-                                }}>
-                                    <Title level={3} style={{ fontSize: '56px', lineHeight: '56px' }}>
-                                        Спасибо, Ваш ответ отправлен.
-                                    </Title>
-                                </div>
+                        <Article>
+                            <p>
+                                Чтобы начать опрос выберите где вы проживаете
+                            </p>
+                        </Article>
+                        <div className={s.buttons}>
+                            {data.map((x, i) => (
                                 <Button
-                                    onClick={() => setModalIsOpen(false)}
+                                    onClick={() => setState(i as any)}
                                     theme={'default'}
                                     size='big'
-                                    style={{
-                                        width: 'fit-content',
-                                    }}
                                 >
-                                    ЗАВЕРШИТЬ
-                            </Button>
-                            </div>
-                        ) : (
-                                <OpinionForm
-                                    showFinish={() => setState('finish')}
-                                    scrollTop={() => {
-                                        if (!refContainer.current) return
-                                        console.log('TO OTOP')
-                                        refContainer.current.scrollIntoView()
-                                    }}
-                                />
-                            )
-                    )}
+                                    {x.name}
+                                </Button>
+                            ))}
+                        </div>
+                    </div>
+                ) : (
+                    <iframe className={s.iframe} src={data[state].src} frameBorder='0' marginHeight={0} marginWidth={0}>Загрузка…</iframe>
+                )}
             </>
         </ReactModal>
     )
