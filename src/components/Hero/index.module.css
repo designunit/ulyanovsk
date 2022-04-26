@@ -4,6 +4,7 @@
     max-width: 100%;
     text-align: left;
 }
+
 .titleLine h1 {
     margin: 0;
     text-align: left;
@@ -19,6 +20,7 @@
     padding: 1rem;
     padding-bottom: .25rem;
 }
+
 .description>p {
     margin-top: 0;
 }
@@ -28,11 +30,11 @@
 }
 
 .heroButtons {
-    padding-top: 64px;
+    padding-top: 1rem;
     display: flex;
 }
 
-.buttonsSpacer{
+.buttonsSpacer {
     width: 36px;
 }
 
@@ -44,6 +46,10 @@
 }
 
 @media screen and (max-width: 480px) {
+    .titleLine {
+        width: 100%;
+    }
+
     .heroSubtitle {
         display: none;
     }
