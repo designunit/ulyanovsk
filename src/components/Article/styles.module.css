@@ -11,3 +11,7 @@
     color: #ffffff;
     background-color: var(--color-gray);
 }
+
+.article p {
+    margin-top: 0;
+}

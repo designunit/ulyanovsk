@@ -85,6 +85,7 @@ export const Modal: React.FC<{
                         <div className={s.buttons}>
                             {data.map((x, i) => (
                                 <Button
+                                    key={i}
                                     onClick={() => setState(i as any)}
                                     theme={'default'}
                                     size='big'
