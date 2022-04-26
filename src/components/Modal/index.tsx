@@ -2,10 +2,10 @@ import s from './styles.module.css'
 
 import ReactModal from 'react-modal'
 import { Button } from '../Button'
-import React, { useRef, useState } from 'react'
-import { OpinionForm } from '../OpinionForm'
+import React, { useState } from 'react'
 import { Title } from '../Title'
 import { Article } from '../Article'
+import { PrismicRichText } from '@prismicio/react'
 
 const data = [
     {
@@ -31,7 +31,8 @@ export type ModalProps = Omit<ReactModal.Props, 'closeTimeoutMS'>
 export const Modal: React.FC<{
     modalIsOpen: boolean
     setModalIsOpen: (isOpen: boolean) => void
-}> = ({ modalIsOpen, setModalIsOpen }) => {
+    data: any
+}> = ({ modalIsOpen, setModalIsOpen, data }) => {
     const delay = 250
 
     const [state, setState] = useState<null | 1 | 2 | 3 | 4>(null)
@@ -48,7 +49,7 @@ export const Modal: React.FC<{
             <>
                 <div className={s.title}>
                     <Title level={3}>
-                        Заголовок опроса
+                        {data.title[0].text}
                     </Title>
                     <Button
                         onClick={() => setModalIsOpen(false)}
@@ -74,8 +75,7 @@ export const Modal: React.FC<{
                 {state == null ? (
                     <div className={s.preview}>
                         <Article>
-                            <p>Друзья, спасибо, что вы здесь!</p>
-                            <p>Расскажите нам о ваших идеях и предложениях по преобразованию Набережной Верхнетуринского пруда для участия во Всероссийском конкурсе лучших проектов создания комфортной городской среды в малых городах.</p>
+                            <PrismicRichText field={data.content} />
                         </Article>
                         <Article>
                             <p>
@@ -83,7 +83,7 @@ export const Modal: React.FC<{
                             </p>
                         </Article>
                         <div className={s.buttons}>
-                            {data.map((x, i) => (
+                            {data.forms.map((x, i) => (
                                 <Button
                                     key={i}
                                     onClick={() => setState(i as any)}
@@ -96,7 +96,7 @@ export const Modal: React.FC<{
                         </div>
                     </div>
                 ) : (
-                    <iframe className={s.iframe} src={data[state].src} frameBorder='0' marginHeight={0} marginWidth={0}>Загрузка…</iframe>
+                    <iframe className={s.iframe} src={data.forms[state].src} frameBorder='0' marginHeight={0} marginWidth={0}>Загрузка…</iframe>
                 )}
             </>
         </ReactModal>

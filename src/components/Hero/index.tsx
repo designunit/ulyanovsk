@@ -9,7 +9,6 @@ import { PrismicRichText } from '@prismicio/react'
 
 export const Hero: React.FC<any> = ({ data, openModal }) => {
     const { mapUrl } = useContext(ConfigContext)
-    console.log(data)
     return (
         <SectionParalaxedBack
             back={(

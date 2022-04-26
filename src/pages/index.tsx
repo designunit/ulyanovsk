@@ -13,9 +13,10 @@ import { News } from 'src/components/News'
 interface PageProps {
     newsData: any
     heroData: any
+    pollData: any
 }
 
-const Index: NextPage<PageProps> = ({ newsData, heroData }) => {
+const Index: NextPage<PageProps> = ({ newsData, heroData, pollData }) => {
 
     const [modalIsOpen, setModalIsOpen] = useState(false)
     return (
@@ -27,6 +28,7 @@ const Index: NextPage<PageProps> = ({ newsData, heroData }) => {
                 <Modal
                     modalIsOpen={modalIsOpen}
                     setModalIsOpen={setModalIsOpen}
+                    data={pollData.data}
                 />
 
                 <Hero
@@ -50,11 +52,13 @@ export const getStaticProps = async ({ previewData }) => {
     const client = createClient({ previewData })
     const newsData = await client.getSingle('news')
     const heroData = await client.getSingle('hero')
+    const pollData = await client.getSingle('poll')
 
     return {
         props: {
             newsData,
             heroData,
+            pollData,
         }
     }
 }

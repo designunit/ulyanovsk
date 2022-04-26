@@ -1,0 +1,65 @@
+{
+  "id": "c5fb8216-4f81-4208-8d68-17aeb8352e38",
+  "uid": "fugit-vitae-laborum",
+  "type": "poll",
+  "data": {
+    "title": [
+      {
+        "type": "heading2",
+        "text": "Morph cutting-edge blockchains",
+        "spans": []
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Officia mollit Lorem adipisicing minim fugiat ut est velit eiusmod aute qui ipsum.",
+        "spans": []
+      }
+    ],
+    "forms": [
+      {
+        "name": "enhance wireless channels",
+        "src": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      },
+      {
+        "name": "seize strategic vortals",
+        "src": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        }
+      },
+      {
+        "name": "mesh synergistic interfaces",
+        "src": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        }
+      },
+      {
+        "name": "iterate intuitive functionalities",
+        "src": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "name": "transform interactive e-tailers",
+        "src": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      },
+      {
+        "name": "generate vertical convergence",
+        "src": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        }
+      }
+    ]
+  }
+}
