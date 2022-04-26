@@ -2,19 +2,19 @@ import Head from 'next/head'
 import { NextPage } from 'next'
 import { Hero } from 'src/components/Hero'
 import { ParallaxProvider } from 'react-scroll-parallax'
-import { Meta, IMeta } from 'src/components/Meta'
-import { About } from 'src/components/About'
 import { Footer } from 'src/components/Footer'
 import { PageLayout } from 'src/components/PageLayout'
 import { Map } from 'src/components/Map'
 import React, { useState } from 'react'
 import { Modal } from 'src/components/Modal'
+import { createClient } from 'prismicio'
+import { News } from 'src/components/News'
 
 interface PageProps {
-    meta: IMeta
+    newsData: any
 }
 
-const Index: NextPage<PageProps> = props => {
+const Index: NextPage<PageProps> = ({ newsData }) => {
 
     const [modalIsOpen, setModalIsOpen] = useState(false)
     return (
@@ -22,53 +22,34 @@ const Index: NextPage<PageProps> = props => {
             openModal={() => setModalIsOpen(true)}
         >
             <ParallaxProvider>
-                <Head>
-                    <title>Набережная г. Верхняя Тура</title>
-                    <Meta meta={props.meta} />
-                </Head>
-    
+
                 <Modal
                     modalIsOpen={modalIsOpen}
                     setModalIsOpen={setModalIsOpen}
                 />
-    
+
                 <Hero
                     openModal={() => setModalIsOpen(true)}
                 />
 
-                <About />
-    
+                <News data={newsData.data.slices} />
+
                 <Map />
-    
-                <Footer />    
+
+                <Footer />
             </ParallaxProvider>
         </PageLayout>
     )
 }
 
 
-export const getStaticProps = async () => {
-    const meta: IMeta = {
-        title: 'Набережная г. Верхняя Тура',
-        description: 'Предлагайте идеи и делитесь своими историями города и Верхнетуринского пруда',
-        image: 'https://верхняятура.рф/static/hero.jpg',
-        imageWidth: 1200,
-        imageHeight: 717,
-
-        url: 'https://верхняятура.рф/',
-        siteName: 'Набережная г. Верхняя Тура',
-        locale: 'ru_RU',
-        type: 'website',
-        domain: 'верхняятура.рф',
-
-        twitterCard: 'summary_large_image',
-        twitterSite: '@',
-        twitterCreator: '@tmshv',
-    }
+export const getStaticProps = async ({ previewData }) => {
+    const client = createClient({ previewData })
+    const newsData = await client.getSingle('news')
 
     return {
         props: {
-            meta,
+            newsData,
         }
     }
 }
