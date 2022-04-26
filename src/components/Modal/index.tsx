@@ -7,24 +7,6 @@ import { Title } from '../Title'
 import { Article } from '../Article'
 import { PrismicRichText } from '@prismicio/react'
 
-const data = [
-    {
-        name: 'Ульяновск',
-        src: 'https://docs.google.com/forms/d/e/1FAIpQLSf50MNOn54JfBkgCm_0CS2MCn1AxLEdoM9mOs88V-isPMUiBQ/viewform?embedded=true',
-    },
-    {
-        name: 'Димитровград',
-        src: 'https://docs.google.com/forms/d/e/1FAIpQLScIBHMxEapxIP6DQZyeIsSBEWYQE6kCma3Br98f7oiM59mM7w/viewform?embedded=true',
-    },
-    {
-        name: 'Новоульяновск',
-        src: 'https://docs.google.com/forms/d/e/1FAIpQLSf50MNOn54JfBkgCm_0CS2MCn1AxLEdoM9mOs88V-isPMUiBQ/viewform?embedded=true',
-    },
-    {
-        name: 'В другом районе агломерации',
-        src: 'https://docs.google.com/forms/d/e/1FAIpQLScIBHMxEapxIP6DQZyeIsSBEWYQE6kCma3Br98f7oiM59mM7w/viewform?embedded=true',
-    },
-]
 
 export type ModalProps = Omit<ReactModal.Props, 'closeTimeoutMS'>
 
@@ -96,7 +78,7 @@ export const Modal: React.FC<{
                         </div>
                     </div>
                 ) : (
-                    <iframe className={s.iframe} src={data.forms[state].src} frameBorder='0' marginHeight={0} marginWidth={0}>Загрузка…</iframe>
+                    <iframe className={s.iframe} src={data.forms[state].src.url} frameBorder='0' marginHeight={0} marginWidth={0}>Загрузка…</iframe>
                 )}
             </>
         </ReactModal>
