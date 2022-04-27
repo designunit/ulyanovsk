@@ -3,10 +3,10 @@
     width: 100%;
 
     display: flex;
-    align-items: center;
+    align-items: baseline;
     z-index: 100;
 
-    padding: 4px 10% 0 10%;
+    padding: 4px 10% 10px 10%;
 
     background-color: white;
     

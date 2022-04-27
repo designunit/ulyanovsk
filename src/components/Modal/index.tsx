@@ -69,7 +69,7 @@ export const Modal: React.FC<{
                                 <Button
                                     key={i}
                                     onClick={() => setState(i as any)}
-                                    theme={'default'}
+                                    theme={'primary'}
                                     size='big'
                                 >
                                     {x.name}

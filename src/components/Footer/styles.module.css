@@ -18,12 +18,12 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: baseline;
     gap: 1rem;
 }
 
 .item {
-    height: 150px;
+    height: 125px;
     flex: 1;
 
     display: flex;
@@ -31,6 +31,9 @@
     align-items: center;
     justify-content: flex-end;
 
+}
+.item > span {
+    width: 150px !important;
 }
 
 .text {
