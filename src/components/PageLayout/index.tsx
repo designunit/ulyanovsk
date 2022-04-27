@@ -23,8 +23,9 @@ export const PageLayout: React.FC<any> = props => {
                     images: [
                         {
                             url: '/static/hero.jpg',
-                            width: 1200,
-                            height: 717,
+                            width: 1920,
+                            height: 1080,
+                            type: 'image/jpeg',
                         }
                     ]
                 }}
