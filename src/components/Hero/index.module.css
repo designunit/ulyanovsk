@@ -1,5 +1,6 @@
 .titleLine {
     padding: 1rem;
+    padding-left: 0;
     width: fit-content;
     max-width: 100%;
     text-align: left;
@@ -8,17 +9,19 @@
 .titleLine h1 {
     margin: 0;
     text-align: left;
+    color: white;
 }
 
-.whiteBg {
-    background-color: white;
+.blackBg {
+    background-color: rgba(0, 0, 0, .5);
 }
 
 .description {
     color: var(--color-text);
-    max-width: 25rem;
+    max-width: 45rem;
     padding: 1rem;
     padding-bottom: .25rem;
+    color: white;
 }
 
 .description>p {
@@ -45,22 +48,34 @@
     padding: 5%;
 }
 
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
 @media screen and (max-width: 480px) {
     .titleLine {
         width: 100%;
+        padding: 4rem 0;
     }
 
-    .heroSubtitle {
-        display: none;
+    .titleLine h1 {
+        text-align: center;
     }
 
     .heroButtons {
         width: 100%;
-        padding: 64px 10% 0 10%;
+        padding: 64px 10% 64px 10%;
         flex-wrap: wrap;
     }
 
     .buttonsSpacer {
         height: 36px;
+    }
+
+    .top {
+        flex-flow: column-reverse;
     }
 }

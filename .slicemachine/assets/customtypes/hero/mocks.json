@@ -1,19 +1,12 @@
 {
-  "id": "b5491d4d-fa36-4653-8c48-cb2b88c6da69",
-  "uid": "placeat-aut-nihil",
+  "id": "4f6cf8fd-caba-4dfd-9836-0ddecd926c58",
+  "uid": "voluptas-incidunt-blanditiis",
   "type": "hero",
   "data": {
-    "title": [
-      {
-        "type": "heading1",
-        "text": "Enable out-of-the-box eyeballs",
-        "spans": []
-      }
-    ],
     "description": [
       {
         "type": "paragraph",
-        "text": "Ullamco adipisicing deserunt culpa. Voluptate ex exercitation eiusmod exercitation.",
+        "text": "Nostrud consectetur ut velit cupidatat ullamco cupidatat ipsum officia sint ad deserunt. Nulla mollit anim eu reprehenderit fugiat dolore sit anim amet. Velit est et nulla in magna.",
         "spans": []
       }
     ],
@@ -24,7 +17,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?w=900&h=500&fit=crop"
     }
   }
 }

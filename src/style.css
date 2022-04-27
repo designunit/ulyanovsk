@@ -2,14 +2,14 @@
 
 :root {
     --border-radius: 0px;
-    --button-border-radius: 0px;
+    --button-border-radius: 5px;
 
     --color-logo: black;
 
     --color-text: black;
-    --color-button: #b2423e;
+    --color-button: #f18985;
     --color-gray: #232224;
-    --color-yellow: #d4c063;
+    --color-green:  #d1e19a;
 
     --font-family: 'Roboto', Helvetica, sans-serif;
     --font-size: 14px;
