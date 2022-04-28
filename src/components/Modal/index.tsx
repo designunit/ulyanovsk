@@ -41,7 +41,8 @@ export const Modal: React.FC<{
                         style={{
                             position: 'absolute',
                             top: '5.5rem',
-                            right: 'calc(10%)',
+                            right: '50%',
+                            transform: 'translateX(min(425px, 30vw))',
                             zIndex: 2,
                         }}
                     >
@@ -57,11 +58,8 @@ export const Modal: React.FC<{
                 {state == null ? (
                     <div className={s.preview}>
                         <Article>
-                            <PrismicRichText field={data.content} />
-                        </Article>
-                        <Article>
                             <p>
-                                Чтобы начать опрос выберите где вы проживаете
+                                {data.content}
                             </p>
                         </Article>
                         <div className={s.buttons}>

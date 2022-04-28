@@ -1,60 +1,33 @@
 {
-  "id": "c5fb8216-4f81-4208-8d68-17aeb8352e38",
-  "uid": "fugit-vitae-laborum",
+  "id": "d4822c69-74d9-4b7b-9949-d4761a7c173a",
+  "uid": "laboriosam-dolorem-error",
   "type": "poll",
   "data": {
     "title": [
       {
         "type": "heading2",
-        "text": "Morph cutting-edge blockchains",
+        "text": "Envisioneer clicks-and-mortar platforms",
         "spans": []
       }
     ],
-    "content": [
-      {
-        "type": "paragraph",
-        "text": "Officia mollit Lorem adipisicing minim fugiat ut est velit eiusmod aute qui ipsum.",
-        "spans": []
-      }
-    ],
+    "content": "disintermediate dot-com functionalities",
     "forms": [
       {
-        "name": "enhance wireless channels",
+        "name": "reintermediate value-added content",
         "src": {
           "link_type": "Web",
-          "url": "http://google.com"
+          "url": "https://prismic.io"
         }
       },
       {
-        "name": "seize strategic vortals",
-        "src": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        }
-      },
-      {
-        "name": "mesh synergistic interfaces",
+        "name": "disintermediate wireless architectures",
         "src": {
           "link_type": "Web",
           "url": "http://twitter.com"
         }
       },
       {
-        "name": "iterate intuitive functionalities",
-        "src": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        }
-      },
-      {
-        "name": "transform interactive e-tailers",
-        "src": {
-          "link_type": "Web",
-          "url": "http://google.com"
-        }
-      },
-      {
-        "name": "generate vertical convergence",
+        "name": "e-enable web-enabled partnerships",
         "src": {
           "link_type": "Web",
           "url": "http://twitter.com"

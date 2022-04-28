@@ -23,8 +23,8 @@
 }
 
 .item {
-    height: 125px;
     flex: 1;
+    position: relative;
 
     display: flex;
     flex-direction: column;
@@ -33,7 +33,8 @@
 
 }
 .item > span {
-    width: 150px !important;
+    flex: 1 0 75px;
+    max-width: 150px !important;
 }
 
 .text {

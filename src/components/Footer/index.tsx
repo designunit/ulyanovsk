@@ -14,7 +14,7 @@ export const Footer: React.SFC = props => {
                 <div className={s.item}>
                     <Image
                         src={oblast}
-                        objectFit='fill'
+                        objectFit='contain'
                     />
                     <div className={s.text}>
                         Губернатор и Правительство<br />
@@ -24,7 +24,7 @@ export const Footer: React.SFC = props => {
                 <div className={s.item}>
                     <Image
                         src={oblast}
-                        objectFit='fill'
+                        objectFit='contain'
                     />
                     <div className={s.text}>
                         Центр стратегических исследований<br />
@@ -34,7 +34,7 @@ export const Footer: React.SFC = props => {
                 <div className={s.item}>
                     <Image
                         src={urbanika}
-                        objectFit='fill'
+                        objectFit='contain'
                     />
                     <div className={s.text}>
                         Институт территориального планирования
@@ -43,7 +43,7 @@ export const Footer: React.SFC = props => {
                 <div className={s.item}>
                     <Image
                         src={centr}
-                        objectFit='fill'
+                        objectFit='contain'
                     />
                     <div className={s.text}>
                         «Центр стратегических разработок<br />
@@ -53,7 +53,7 @@ export const Footer: React.SFC = props => {
                 <div className={s.item}>
                     <Image
                         src={unit}
-                        objectFit='fill'
+                        objectFit='contain'
                     />
                     <div className={s.text}>
                         Проектная студия<br />
