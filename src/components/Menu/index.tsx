@@ -1,6 +1,7 @@
 import s from './styles.module.css'
 import { Button } from "../Button"
-import { useRef } from "react"
+import { useContext, useRef } from "react"
+import { ConfigContext } from 'src/context/config'
 
 interface MenuProps {
     onClick: (x: any, e: any) => void
@@ -8,9 +9,10 @@ interface MenuProps {
 
 export const Menu: React.FC<MenuProps> = ({ onClick }) => {
     const underline = useRef(null)
+    const { mapUrl } = useContext(ConfigContext)
     const buttons = [
         {
-            href: '/#map',
+            href: mapUrl,
             text: 'Карта идей'
         },
         {
