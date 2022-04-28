@@ -19,7 +19,7 @@ export const Map: React.FC = () => {
             back={(
                 <>
                     <Image
-                        src='/static/mapPreview.jpg'
+                        src='/static/map.png'
                         layout='fill'
                         objectFit='cover'
                     />

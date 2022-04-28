@@ -5,7 +5,7 @@ export type Config = {
 }
 
 export const defaultConfig: Config = {
-    mapUrl: '/',
+    mapUrl: 'https://mesto.io/D3CJ49RMCQQ46N0V',
 }
 
 export const ConfigContext = createContext<Config>(defaultConfig)
