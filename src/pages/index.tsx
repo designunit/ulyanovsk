@@ -35,6 +35,7 @@ const Index: NextPage<PageProps> = ({ newsData, heroData, pollData }) => {
                     openModal={() => setModalIsOpen(true)}
                 />
 
+                <span id='news' />
                 <News data={newsData.data.slices} />
 
                 <span id='map' />

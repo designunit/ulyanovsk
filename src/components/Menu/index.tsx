@@ -12,6 +12,10 @@ export const Menu: React.FC<MenuProps> = ({ onClick }) => {
     const { mapUrl } = useContext(ConfigContext)
     const buttons = [
         {
+            href: '/#news',
+            text: 'новости'
+        },
+        {
             href: mapUrl,
             text: 'Карта идей'
         },
