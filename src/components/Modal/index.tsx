@@ -58,9 +58,12 @@ export const Modal: React.FC<{
                 {state == null ? (
                     <div className={s.preview}>
                         <Article>
-                            <p>
+                            <Title style={{
+                                textAlign: 'center',
+                                whiteSpace: 'pre-line'
+                            }}>
                                 {data.content}
-                            </p>
+                            </Title>
                         </Article>
                         <div className={s.buttons}>
                             {data.forms.map((x, i) => (

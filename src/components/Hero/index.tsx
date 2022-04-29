@@ -40,11 +40,11 @@ export const Hero: React.FC<any> = ({ data, openModal }) => {
                         </span>
                     </Title>
                 </div>
-                <div>
+                {/* <div>
                     <Image
                         src={gerb}
                     />
-                </div>
+                </div> */}
             </div>
 
             <span className={s.heroSubtitle}>
