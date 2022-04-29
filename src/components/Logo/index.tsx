@@ -9,7 +9,7 @@ export const Logo: React.SFC<LogoProps> = props => {
     return (
         <Link href='/'>
             <a className={s.logo} style={props.style}>
-                Ивановская область
+            УЛЬЯНОВСКАЯ ОБЛАСТЬ
             </a>
         </Link>
     )
