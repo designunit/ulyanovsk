@@ -8,6 +8,7 @@ import React, { useState } from 'react'
 import { Modal } from 'src/components/Modal'
 import { createClient } from 'prismicio'
 import { News } from 'src/components/News'
+import { Numbers } from 'src/components/Numbers'
 
 interface PageProps {
     newsData: any
@@ -34,6 +35,8 @@ const Index: NextPage<PageProps> = ({ newsData, heroData, pollData }) => {
                     data={heroData.data}
                     openModal={() => setModalIsOpen(true)}
                 />
+
+                <Numbers />
 
                 <span id='news' />
                 <News data={newsData.data.slices} />

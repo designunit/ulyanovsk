@@ -1,0 +1,29 @@
+.numContainer {
+    display: flex;
+    gap: 2rem;
+    min-height: calc(50vh);
+    justify-content: right;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.item {
+    flex: 1 0 calc(30% - 2rem);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 480px) {
+    .numContainer {
+        flex-direction: column !important; 
+        flex-flow: nowrap;
+        justify-content: center;
+        gap: 6rem;
+        width: 100%;
+    }
+    .item:nth-child(4) {
+        display: none;
+    }
+}
