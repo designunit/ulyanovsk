@@ -13,12 +13,13 @@
     flex-flow: column;
     align-items: center;
     gap: 2rem;
+    color: white;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     .numContainer {
-        flex-direction: column !important; 
-        flex-flow: nowrap;
+        /* flex-direction: column !important; 
+        flex-flow: nowrap; */
         justify-content: center;
         gap: 6rem;
         width: 100%;

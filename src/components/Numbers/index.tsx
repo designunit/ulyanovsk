@@ -5,6 +5,7 @@ import useSpring from 'react-use/lib/useSpring'
 import { useState } from 'react'
 import s from './styles.module.css'
 import { Title } from '../Title'
+import { useMobile } from 'src/hooks/useMobile'
 
 export const Numbers = () => {
     const [one, setOne] = useState(0)
@@ -58,6 +59,7 @@ export const Numbers = () => {
         },
     ]
 
+    const isMobile = useMobile()
     return (
         <>
             <SectionParalaxedBack
@@ -70,10 +72,14 @@ export const Numbers = () => {
                 back={(
                     <>
                         <Image
-                            src='/static/numbers.png'
+                            src='/static/urb_count.png'
                             layout='fill'
                             objectFit='cover'
                             quality={90}
+                            objectPosition={isMobile && '-100% 0%'}
+                            style={{
+                                background: '#377EB8',
+                            }}
                         />
                     </>
                 )}
@@ -91,7 +97,8 @@ export const Numbers = () => {
                                 <Title style={{
                                     fontSize: '6rem',
                                     lineHeight: '6rem',
-                                    fontWeight: 'normal'
+                                    fontWeight: 'normal',
+                                    color: 'white',
                                 }}>
                                     {x.num}
                                 </Title>

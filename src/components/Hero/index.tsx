@@ -7,6 +7,7 @@ import { SectionParalaxedBack } from '../SectionParalaxedBack'
 import Image from 'next/image'
 import { PrismicRichText } from '@prismicio/react'
 import gerb from '/public/static/maingerb.svg'
+import hero from '/public/static/hero.png'
 
 export const Hero: React.FC<any> = ({ data, openModal }) => {
     const { mapUrl } = useContext(ConfigContext)
@@ -14,13 +15,16 @@ export const Hero: React.FC<any> = ({ data, openModal }) => {
         <SectionParalaxedBack
             back={(
                 <Image
-                    src={data.image?.url ?? '/static/unit.jpg'}
-                    {...data.image?.dimensions ?? { width: 1590, height: 307 }}
-                    alt={data.image?.alt ?? ''}
+                    // src={data.image?.url ?? '/static/unit.jpg'}
+                    // {...data.image?.dimensions ?? { width: 1590, height: 307 }}
+                    // alt={data.image?.alt ?? ''}
+                    src={hero}
+                    alt=''
                     layout='fill'
                     objectFit='cover'
                     priority
                     loading='eager'
+                    quality={100}
                 />
             )}
             contentStyle={{
