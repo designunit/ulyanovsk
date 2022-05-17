@@ -5,6 +5,7 @@ import oblast from '/public/static/Герб_Ульяновской_област�
 import urbanika from '/public/static/urbanika.svg'
 import centr from '/public/static/centr.svg'
 import unit from '/public/static/unit.jpg'
+import tranceparent from '/public/static/tranceparent.svg'
 
 export const Footer: React.SFC = props => {
 
@@ -23,7 +24,7 @@ export const Footer: React.SFC = props => {
                 </div>
                 <div className={s.item}>
                     <Image
-                        src={oblast}
+                        src={tranceparent}
                         objectFit='contain'
                     />
                     <div className={s.text}>
