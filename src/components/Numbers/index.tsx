@@ -97,7 +97,6 @@ export const Numbers = () => {
                                 <Title style={{
                                     fontSize: '6rem',
                                     lineHeight: '6rem',
-                                    fontWeight: 'normal',
                                     color: 'white',
                                 }}>
                                     {x.num}

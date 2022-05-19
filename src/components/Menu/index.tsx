@@ -36,6 +36,7 @@ export const Menu: React.FC<MenuProps> = ({ onClick }) => {
                     onClick={e => onClick(x, e)}
                     style={{
                         fontSize: '1.05em',
+                        color: 'black',
                     }}
                 >
                     {x.text}
@@ -48,7 +49,7 @@ export const Menu: React.FC<MenuProps> = ({ onClick }) => {
                     position: 'absolute',
                     width: '0',
                     height: '2px',
-                    backgroundColor: '#111b47',
+                    backgroundColor: 'black',
                     transition: 'all .5s',
                 }}
             />

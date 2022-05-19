@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Roboto&family=PT+Sans+Narrow:wght@400;700&display=swap');
 
 :root {
     --border-radius: 0px;
@@ -10,9 +10,13 @@
     --color-button: #d6424d;
     --color-gray: #232224;
     --color-green:  #ffd166;
+    --color-blue: #377EB8;
+    --color-blue-dark: #0c3d85;
 
     --font-family: 'Roboto', Helvetica, sans-serif;
     --font-size: 14px;
+
+    --font-family-hero: 'PT Sans Narrow', sans-serif;
 }
 
 html,

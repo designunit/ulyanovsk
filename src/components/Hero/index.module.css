@@ -7,10 +7,17 @@
 }
 
 .titleLine h1 {
+    font-size: 3.5em;
     margin: 0;
     text-align: left;
-    color: #525252;
-    text-shadow:
+    color: var(--color-blue-dark);
+    letter-spacing: .05em;
+
+    background: white;
+    padding: 1rem;
+    line-height: .75em;
+
+    /* text-shadow:
         -1px -1px 0 white,
         0 -1px 0 white,
         1px -1px 0 white,
@@ -18,11 +25,17 @@
         1px 1px 0 white,
         0 1px 0 white,
         -1px 1px 0 white,
-        -1px 0 0 white;
+        -1px 0 0 white; */
+}
+
+.titleLine h1>span {
+    font-size: .7em;
+    -webkit-text-stroke: 1px var(--color-blue-dark);
+    color: white;
 }
 
 .blackBg {
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(255, 255, 255, .9);
 }
 
 .description {
@@ -30,7 +43,7 @@
     max-width: 45rem;
     padding: 2rem;
     padding-bottom: .25rem;
-    color: white;
+    color: var(--color-blue-dark);
 }
 
 .description>p {
@@ -72,6 +85,15 @@
 
     .titleLine h1 {
         text-align: center;
+        line-height: .8em;
+        font-size: 2.5em;
+        letter-spacing: .08em;
+    }
+
+    .titleLine h1>span {
+        display: block;
+        padding-top: 1rem;
+        letter-spacing: .05em;
     }
 
     .heroButtons {

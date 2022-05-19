@@ -26,6 +26,17 @@ export const Map: React.FC = () => {
                 </>
             )}
         >
+            <div
+                style={{
+                    position: 'absolute',
+                    top: 0,
+                    width: '100%',
+                    height: '100%',
+                    background: 'var(--color-blue)',
+                    opacity: .5,
+                    zIndex: -1,
+                }}
+            />
             <div style={{
                 height: '100%',
                 display: 'flex',
@@ -38,7 +49,13 @@ export const Map: React.FC = () => {
                 maxWidth: '100%',
             }}>
                 <div>
-                    <Title level={2} style={{ textAlign: 'center' }}>
+                    <Title level={2} style={{
+                        textAlign: 'center',
+                        color: ' white',
+                        fontSize: '3.5em',
+                        textTransform: 'uppercase',
+                        lineHeight: '1.1em',
+                    }}>
                         Карта идей и предложений
                     </Title>
                 </div>

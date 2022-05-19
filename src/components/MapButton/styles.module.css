@@ -4,22 +4,25 @@
 
     border-radius: 50%;
     border: solid 4px white;
-    background-color: var(--color-button);
+    background-color: var(--color-blue);
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    font-family: 'PT Serif', serif;
+    font-family: var(--font-family-hero);
     font-weight: bold;
     font-size: 32px;
+    letter-spacing: .05em;
     text-align: center;
+    text-transform: uppercase;
     color: white;
 }
 
 .button:hover {
-    background-color: var(--color-gray);
-    color: white;
+    background-color: white;
+    color: var(--color-blue);
+    border-color: var(--color-blue);
 }
 
 .container {

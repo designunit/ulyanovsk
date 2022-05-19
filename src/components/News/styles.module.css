@@ -9,6 +9,9 @@
 .section {
     gap: 2rem;
 }
+.section:not(:last-of-type) {
+    padding-bottom: unset !important;
+}
 
 .head {
     width: 100%;

@@ -15,7 +15,11 @@ export const News: React.FC<{ data: any }> = ({ data }) => (
                 className={s.section}
             >
                 <div className={s.head}>
-                    <Title level={4} style={{ marginLeft: '.15rem', color: 'var(--color-button)' }}>
+                    <Title level={4} style={{
+                        marginLeft: '.15rem',
+                        color: 'var(--color-blue-dark)',
+                        fontWeight: 'bold',
+                    }}>
                         {x.primary?.date && prismicH.asDate(x.primary.date).toLocaleDateString()}
                     </Title>
                     <Title level={2}>

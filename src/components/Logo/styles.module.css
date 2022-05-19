@@ -1,8 +1,8 @@
 .logo {
-    font-family: 'PT Serif', serif;
+    display: block;
+    font-family: var(--font-family-hero);
     font-weight: 900;
-    font-size: 26px;
-    line-height: 38px;
+    font-size: 22px;
 
     text-align: center;
 

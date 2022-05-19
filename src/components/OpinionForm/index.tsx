@@ -543,7 +543,7 @@ const Form4 = (props: any) => {
     const { handleSubmit, register, errors } = useForm({
         defaultValues: props.defaultValues
     })
-    
+
     useEffect(() => props.scrollTop())
 
     return (
@@ -759,7 +759,7 @@ export const OpinionForm: React.FC<any> = ({ showFinish, scrollTop }) => {
                     ))}
                 </div>
                 <p style={{
-                    fontFamily: 'Bebas Neue',
+                    fontFamily: 'var(--font-family-hero)',
                     margin: '1rem 0 0 0',
                 }}>
                     {stepButtons[step].description}
