@@ -4,7 +4,7 @@ import Image from 'next/image'
 import oblast from '/public/static/Герб_Ульяновской_области_(2013).svg'
 import urbanika from '/public/static/urbanika.svg'
 import centr from '/public/static/centr.svg'
-import unit from '/public/static/unit.jpg'
+import unit from '/public/static/unit.svg'
 import tranceparent from '/public/static/tranceparent.svg'
 
 export const Footer: React.SFC = props => {
