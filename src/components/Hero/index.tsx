@@ -18,7 +18,7 @@ export const Hero: React.FC<any> = ({ data, openModal }) => {
                     // src={data.image?.url ?? '/static/unit.jpg'}
                     // {...data.image?.dimensions ?? { width: 1590, height: 307 }}
                     // alt={data.image?.alt ?? ''}
-                    
+
                     src={hero}
                     alt=''
                     layout='fill'
@@ -38,7 +38,7 @@ export const Hero: React.FC<any> = ({ data, openModal }) => {
                     <Title>
                         Комплексное аналитическое исследование<br />
                         <span>
-                            Ульяновска и Ульяновско-Димитровградской агломерации
+                            потенциала развития Ульяновско-Димитровградской агломерации
                         </span>
                     </Title>
                 </div>
