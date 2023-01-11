@@ -40,6 +40,7 @@
 .text {
     flex: 1;
     line-height: 1.5em;
+    word-break: break-word;
 }
 
 @media screen and (max-width: 480px) {
